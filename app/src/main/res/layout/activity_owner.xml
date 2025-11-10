@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".OwnerActivity">
+
+    <LinearLayout
+        android:id="@+id/linearlayoutTop"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/toolbar_background"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ToggleButton
+            android:id="@+id/toggleButtonEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="32dp"
+            android:layout_weight="1"
+            android:text="ToggleButton"
+            tools:ignore="VisualLintButtonSize" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="16dp"
+            android:layout_weight="1"
+            android:text="@string/button_label"
+            tools:ignore="VisualLintButtonSize" />
+    </LinearLayout>
+
+
+    <ScrollView
+        android:layout_width="409dp"
+        android:layout_height="590dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayoutMenuBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearlayoutTop"
+        tools:ignore="SpeakableTextPresentCheck">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/editTextName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:ems="10"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:minHeight="48dp"
+                android:textColorHint="#8D6E63"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="LabelFor" />
+
+            <EditText
+                android:id="@+id/editTextPhoneNumber"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                android:ems="10"
+                android:hint="@string/enter_phone_number"
+                android:minHeight="48dp"
+                android:textColorHint="#8D6E63"
+                android:inputType="phone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextName"
+                tools:ignore="Autofill" />
+
+            <EditText
+                android:id="@+id/editTextEmail"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                android:ems="10"
+                android:hint="@string/enter_your_email"
+                android:inputType="text"
+                android:minHeight="48dp"
+                android:textColorHint="#8D6E63"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextPhoneNumber"
+                tools:ignore="Autofill,TextFields" />
+
+            <EditText
+                android:id="@+id/editTextCity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:ems="9"
+                android:hint="@string/enter_city"
+                android:inputType="text"
+                android:minHeight="48dp"
+                android:textColorHint="#8D6E63"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextEmail"
+                tools:ignore="Autofill" />
+
+            <EditText
+                android:id="@+id/editTextTextState"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:ems="2"
+                android:hint="@string/enter_state"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:minWidth="48dp"
+                android:minHeight="48dp"
+                android:textColorHint="#8D6E63"
+                app:layout_constraintStart_toEndOf="@+id/editTextCity"
+                app:layout_constraintTop_toBottomOf="@+id/editTextEmail"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <EditText
+                android:id="@+id/editTextZipCode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                android:ems="6"
+                android:hint="@string/enter_zip"
+                android:inputType="text"
+                android:minHeight="48dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextEmail"
+                tools:ignore="Autofill" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/linearLayoutMenuBar"
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageButton
+            android:id="@+id/imageButtonOwner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:contentDescription="@string/ownerContentDescription"
+            app:srcCompat="@drawable/owner" />
+
+        <ImageButton
+            android:id="@+id/imageButtonPet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:contentDescription="@string/pet_content_description"
+            app:srcCompat="@drawable/pet" />
+
+        <ImageButton
+            android:id="@+id/imageButtonWalker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:contentDescription="@string/walkerContentDescription"
+            app:srcCompat="@drawable/walker"
+            tools:ignore="ImageContrastCheck" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

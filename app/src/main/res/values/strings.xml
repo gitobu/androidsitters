@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Pet Sitters</string>
+    <string name="button_label">Save</string>
+    <string name="pet_content_description">Pet</string>
+    <string name="walkerContentDescription">Walker</string>
+    <string name="ownerContentDescription">Owner</string>
+    <string name="enter_phone_number">Enter phone number</string>
+    <string name="enter_name">Enter your name</string>
+    <string name="enter_your_email">Enter your email</string>
+    <string name="enter_city">City</string>
+    <string name="enter_state">ST</string>
+    <string name="enter_zip">Zip</string>
+    <string name="enter_full_name">Enter your name</string>
+</resources>
