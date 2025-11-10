@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -26,6 +27,22 @@ public class OwnerInformationActivity extends AppCompatActivity {
         initOwnerActivity();
         initPetActivity();
         initSitterActivity();
+        getOwnerValues();
+    }
+    private void getOwnerValues(){
+        Intent intent = getIntent();
+
+        String owner_name = intent.getStringExtra("o_name");
+        TextView textViewOwnerName = findViewById(R.id.textViewName);
+        textViewOwnerName.setText("Owner Name: " + owner_name);
+
+        String owner_email = intent.getStringExtra("o_email");
+        TextView textViewOwnerEmail = findViewById(R.id.textViewEmail);
+        textViewOwnerEmail.setText("Owner Email: +" + owner_email);
+
+        String owner_phone_number = intent.getStringExtra("o_phone_number");
+        TextView textViewPhoneNumber = findViewById(R.id.textViewPhoneNumber);
+        textViewPhoneNumber.setText("Owner Phone #: " + owner_phone_number);
     }
     private void initOwnerActivity(){
         ImageButton owner = findViewById(R.id.imageButtonOwner);

@@ -47,9 +47,15 @@ public class OwnerActivity extends AppCompatActivity {
             public void onClick(View view) {
             Intent intent = new Intent(OwnerActivity.this, OwnerInformationActivity.class);
             intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-            EditText editTextName = findViewById(R.id.editTextName);
-            String owner_name = editTextName.getText().toString();
-            intent.putExtra("o_name", owner_name);
+                EditText editTextName = findViewById(R.id.editTextName);
+                String owner_name = editTextName.getText().toString();
+                intent.putExtra("o_name", owner_name);
+                EditText editTextEmail = findViewById(R.id.editTextEmail);
+                String owner_email = editTextName.getText().toString();
+                intent.putExtra("o_email", owner_email);
+                EditText editTextPhoneNumber = findViewById(R.id.editTextPhoneNumber);
+                String owner_phone_number = editTextName.getText().toString();
+                intent.putExtra("o_phone_number", owner_phone_number);
             startActivity(intent);
             }
         });

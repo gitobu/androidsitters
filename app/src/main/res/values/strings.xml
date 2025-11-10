@@ -11,4 +11,5 @@
     <string name="enter_state">ST</string>
     <string name="enter_zip">Zip</string>
     <string name="enter_full_name">Enter your name</string>
+    <string name="owner_information">Owner Information</string>
 </resources>
